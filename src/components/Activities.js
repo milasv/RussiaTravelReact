@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
 import axios from 'axios';
-//import { Link } from 'react-router-dom';
 
-const SERVER_URL = 'https://http://localhost:3000/activities';
+const SERVER_URL = 'http://localhost:3000/activities.json';
 
 class Activities extends Component {
   constructor() {
@@ -25,7 +24,6 @@ class Activities extends Component {
 
       return (
         <div className="activities">
-          <Navbar />
           <h1>All Activities</h1>
           <Gallery activities={ this.state.activities}/>
         </div>
@@ -39,7 +37,7 @@ class Gallery extends Component {
     return (
       <div className="activities">
       <h2>Activities</h2>
-        <table className="locationtable">
+        <table className="activitytable">
         <thead>
         <tr>
           <th>Name</th>
@@ -54,7 +52,7 @@ class Gallery extends Component {
   <tr key={f.id}>
     <td>{f.name}</td>
     <td>{f.about}</td>
-    <td >{f.image}</td>
+    <td ><img src={f.image}/></td>
 
   </tr>)}
   </tbody>
