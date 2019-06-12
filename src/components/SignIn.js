@@ -4,8 +4,9 @@ import Navbar from './Navbar'
 
 const SignIn = () => (
   <div>
-    <Navbar />
+
     <div className="container">
+    <Navbar />
       <h1>Sign In</h1>
       <form>
         <div className="form-group">

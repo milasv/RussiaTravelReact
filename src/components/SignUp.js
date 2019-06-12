@@ -59,8 +59,9 @@ class SignUp extends Component {
     const {fname, lname, email, password, password_confirmation} = this.state;
     return(
       <div>
-        <Navbar />
+
         <div className="container">
+        <Navbar />
           <h1>Sign Up</h1>
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">

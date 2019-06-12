@@ -8,7 +8,11 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
-import Maps from './components/Maps'
+import HomeMap from './components/HomeMap';
+import PlaceShow from './components/PlaceShow';
+import ActivityShow from './components/ActivityShow';
+import RegionShow from './components/RegionShow';
+import SeasonShow from './components/SeasonShow';
 
 
 const Routes = (
@@ -23,7 +27,12 @@ const Routes = (
       <Route exact path="/home" component={ Home } />
       <Route exact path="/sign_in" component={ SignIn } />
       <Route exact path="/sign_up" component={ SignUp } />
-      <Route exact path="/maps" component={ Maps } />
+      <Route exact path="/maps" component={ HomeMap } />
+      <Route exact path="/places/:id" component={ PlaceShow } />
+      <Route exact path="/activities/:id" component={ ActivityShow } />
+      <Route exact path="/regions/:id" component={ RegionShow } />
+      <Route exact path="/seasons/:id" component={ SeasonShow } />
+
 
     </div>
   </Router>

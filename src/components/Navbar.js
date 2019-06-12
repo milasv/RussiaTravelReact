@@ -6,7 +6,7 @@ class Navbar extends Component {
     return (
       <div>
         <nav className="navbar navbar-light bg-light">
-          <Link className="navbar-brand" to="/">Russia Travel</Link>
+          <Link className="navbar-brand" to="/home">Russia Travel</Link>
           <div className="navbar-nav">
             <Link to="/activities" className="nav-link">Activities</Link>
           </div>
@@ -19,16 +19,14 @@ class Navbar extends Component {
           <div className="navbar-nav">
             <Link to="/seasons" className="nav-link">Seasons</Link>
           </div>
-          <div id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link to="/Sign_in" className="nav-link">Sign In </Link>
-              </li>
-              <li className="nav-item">
-              <Link to="/Sign_up"className="nav-link">Sign Up </Link>
-              </li>
-            </ul>
+          <div className="navbar-nav">
+            <Link to="/Sign_in" className="nav-link">Sign In</Link>
           </div>
+          <div className="navbar-nav">
+            <Link to="/Sign_up" className="nav-link">Sign Up</Link>
+          </div>
+
+
         </nav>
       </div>
     )

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import ActivityShow from './ActivityShow'
 
 const SERVER_URL = 'http://localhost:3000/activities.json';
 
@@ -23,8 +25,9 @@ class Activities extends Component {
   render () {
 
       return (
-        <div className="activities">
-          <h1>All Activities</h1>
+        <div className="container">
+
+
           <Gallery activities={ this.state.activities}/>
         </div>
       );
@@ -35,28 +38,31 @@ class Activities extends Component {
 class Gallery extends Component {
   render() {
     return (
-      <div className="activities">
+      <div className="container">
+      <Navbar />
       <h2>Activities</h2>
-        <table className="activitytable">
-        <thead>
-        <tr>
-          <th>Name</th>
-          <th>About</th>
-          <th>Image</th>
 
-          </tr>
-          </thead>
-
-            <tbody>
 {this.props.activities.map((f) =>
-  <tr key={f.id}>
-    <td>{f.name}</td>
-    <td>{f.about}</td>
-    <td ><img src={f.image}/></td>
 
-  </tr>)}
-  </tbody>
-</table>
+  <ul key={f.id}>
+
+  <Link to={{
+    pathname: `activities/${f.id}`,
+    state: {
+      activities: f
+    }
+  }}><li>{f.name}</li></Link>
+
+    <div class="gallery">
+    <li class= "image" ><img src={f.image}/></li>
+    </div>
+
+    <li>About: {f.about}</li>
+
+    
+
+  </ul>)}
+
       </div>
 
     );

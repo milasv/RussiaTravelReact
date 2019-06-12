@@ -5,7 +5,6 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 import Routes from './Routes';
-import App from './components/App';
 
  ReactDOM.render(Routes, document.getElementById('root'));
 

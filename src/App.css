@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -30,4 +30,149 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+
+
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: rgba(71, 61.2, 52.5, 0.7);
+  color:white;
+  position: relative;
+  text-align: center;
+}
+
+.thumb {
+  max-height: 20em;
+  font-weight: bold;
+
+}
+
+.feature {
+  max-width: 100%;
+}
+
+
+body {
+  background-image: url("sergey-pesterev-1156037-unsplash.jpg");
+  background-position:center;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-size:100% auto;
+  background-size:cover;
+}
+
+h1 {
+    display: block;
+    font-size: 3em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color:white;
+    text-align: center;
+}
+
+ul {
+  color:white;
+  text-align: center;
+  list-style-type: none;
+}
+
+nav {
+  color:white;
+  font-weight: bold;
+  font-size: 1em;
+  /* font-style: italic; */
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+div {
+  color:white;
+}
+
+h2 {
+  text-align: center;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em;
+
+}
+
+.navbar-brand {
+    color:white;
+}
+
+div a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+p {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.navbar-nav {
+  display: inline;
+  background-color: #dddddd;
+
+  padding: 8px;
+}
+
+.nav-item {
+  display: inline;
+  border-right: 1px solid black;
+}
+
+.nav-item:last-child {
+  border-right: none;
+}
+
+.nav-link {
+  color: black
+}
+
+/* .image {
+
+  width: 100%;
+  height: auto;
+} */
+
+/* .gallery {
+  margin: 10px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 270px;
+} */
+
+/* div.gallery:hover {
+  border: 5px solid #777;
+} */
+
+div.gallery img {
+  width: 50%;
+  height: auto;
+}
+
+.big {
+  font-weight: bold;
+  font-size: 1.3em;
 }

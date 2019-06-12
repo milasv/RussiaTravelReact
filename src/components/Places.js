@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import PlaceShow from './PlaceShow'
 
 const SERVER_URL = 'http://localhost:3000/places.json';
 
@@ -24,8 +25,8 @@ class Places extends Component {
   render () {
 
       return (
-        <div className="places">
-          <h1>All Places</h1>
+        <div className="container">
+
           <Gallery places={ this.state.places}/>
         </div>
       );
@@ -36,36 +37,41 @@ class Places extends Component {
 class Gallery extends Component {
   render() {
     return (
-      <div className="places">
+      <div className="container">
+      <Navbar />
       <h2>Places</h2>
-        <table className="placetable">
-        <thead>
-        <tr>
-          <th>Name</th>
-          <th>About</th>
-          <th>Image</th>
-          <th>Distance from Moscow</th>
-          <th>Average winter temperature (low/high)</th>
-          <th>Average summer temperature (low/high)</th>
-          <th>Avarage annual rainfall</th>
 
-          </tr>
-          </thead>
-
-            <tbody>
 {this.props.places.map((f) =>
-  <tr key={f.id}>
-    <td>{f.name}</td>
-    <td>{f.about}</td>
-    <td ><img src={f.image}/></td>
-    <td >{f.distance_from_moscow}</td>
-    <td >{f.avg_winter_temp}</td>
-    <td >{f.avg_summer_temp}</td>
-    <td >{f.avg_rainfall}</td>
+  <ul key={f.id}>
 
-  </tr>)}
-  </tbody>
-</table>
+    <Link to={{
+      pathname: `places/${f.id}`,
+      state: {
+        places: f
+      }
+    }}><li>{f.name}</li></Link>
+
+    <div class="gallery">
+    <li ><img src={f.image}/></li>
+    </div>
+
+    <li>About: {f.about}</li>
+
+    <li >Distance from Moscow: {f.distance_from_moscow}</li>
+
+    <li >Average winter temperature (low/high): {f.avg_winter_temp}</li>
+
+    <li >Average summer temperature (low/high): {f.avg_summer_temp}</li>
+
+    <li >Avarage annual rainfall: {f.avg_rainfall}</li>
+
+    <li >Latitude: {f.lat}</li>
+
+    <li >Longitude: {f.lng}</li>
+
+
+  </ul>)}
+
       </div>
 
     );
