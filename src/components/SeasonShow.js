@@ -54,7 +54,7 @@ class SeasonShow extends Component {
           <li >{this.state.season.time}</li>
 
 
-          </ul>)
+          </ul>
 
 
           </div>

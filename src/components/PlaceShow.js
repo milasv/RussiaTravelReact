@@ -66,8 +66,8 @@ class PlaceShow extends Component {
 
           <li >Longitude: {this.state.place.lng}</li>
 
-        
-          </ul>)
+
+          </ul>
 
 
           </div>

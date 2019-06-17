@@ -52,9 +52,9 @@ class ActivityShow extends Component {
           </div>
 
           <li>About: {this.state.activity.about}</li>
-          
 
-          </ul>)
+
+          </ul>
 
           </div>
     );

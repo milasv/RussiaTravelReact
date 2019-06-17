@@ -33,10 +33,10 @@ class Home extends Component {
 
         <div className="jumbotron">
           <h1 className="display-4"> Why Russia? </h1>
-          <p className="lead"> We are the best country in the world. Talk with our bears and be happy! </p>
+          <p className="lead"> We are the best country in the world. Hang out with our bears and be happy! </p>
           <hr className="my-4"></hr>
           {this.state.places.length > 0 && <HomeMap history={this.props.history} items={this.state.places} />}
-          <p>Where you want to go?</p>
+          <p>Where do you want to go?</p>
           <Link className="btn btn-info btn-lg" to="/search" role="button">Search</Link>
         </div>
 

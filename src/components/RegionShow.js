@@ -55,7 +55,7 @@ class RegionShow extends Component {
           <li >{this.state.region.capital}</li>
 
 
-          </ul>)
+          </ul>
 
 
           </div>
